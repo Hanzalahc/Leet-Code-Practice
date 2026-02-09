@@ -1,4 +1,6 @@
 // Constraints: 1 <= n <= 104
+
+// My Own Solution - Accepted
 var fizzBuzz = function (n) {
   let arr = [];
   for (let i = 0; i < n; i++) {
