@@ -32,7 +32,6 @@ var isPalindrome = function (x) {
     let last = left % 10;
     left = Math.floor(left / 10);
     rev = rev * 10 + last;
-    console.log(last, left, rev);
   }
   return x === rev;
 };
