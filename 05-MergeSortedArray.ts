@@ -5,14 +5,14 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   let nIndex = n - 1;
 
   while (mIndex >= 0 && nIndex >= 0) {
-    if (nums2[nIndex] > nums1[mIndex]) {
+    if (nums1[mIndex] < nums2[nIndex]) {
       nums1[combineIndex] = nums2[nIndex];
       combineIndex--;
       nIndex--;
     } else {
       nums1[combineIndex] = nums1[mIndex];
-      mIndex--;
       combineIndex--;
+      mIndex--;
     }
   }
 
@@ -23,6 +23,6 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   }
 }
 
-merge([2, 0], 1, [1], 1);
+// merge([2, 0], 1, [1], 1);
 
 // Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
